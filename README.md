@@ -43,36 +43,33 @@ The application was developed as part of a technical assignment to demonstrate F
 
 ## Folder Structure
 
----
-
+```
 lib
- ├── models
- │   ├── room_model.dart
- │   └── booking_model.dart
- │
- ├── providers
- │   ├── auth_provider.dart
- │   ├── room_provider.dart
- │   └── booking_provider.dart
- │
- ├── screens
- │   ├── login_screen.dart
- │   ├── dashboard_screen.dart
- │   ├── room_detail_screen.dart
- │   └── my_bookings_screen.dart
- │
- ├── widgets
- │   ├── room_card.dart
- │   ├── booking_card.dart
- │   └── primary_button.dart
- │
- ├── utils
- │   └── helpers.dart
- │
- └── main.dart
-
-
----
+├── models
+│   ├── room_model.dart
+│   └── booking_model.dart
+│
+├── providers
+│   ├── auth_provider.dart
+│   ├── room_provider.dart
+│   └── booking_provider.dart
+│
+├── screens
+│   ├── login_screen.dart
+│   ├── dashboard_screen.dart
+│   ├── room_detail_screen.dart
+│   └── my_bookings_screen.dart
+│
+├── widgets
+│   ├── room_card.dart
+│   ├── booking_card.dart
+│   └── primary_button.dart
+│
+├── utils
+│   └── helpers.dart
+│
+└── main.dart
+```
 
 ## Setup Instructions
 
