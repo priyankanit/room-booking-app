@@ -1,0 +1,55 @@
+Architecture Notes – Room Booking Application
+
+State Management
+
+This application uses the Provider package for state management. 
+Providers are used to manage and share application state across multiple widgets.
+
+RoomProvider manages the room list shown on the dashboard.
+BookingProvider manages booking operations including creating bookings, validating room availability, and storing bookings locally.
+
+Using Provider helps separate UI from business logic and keeps the architecture clean and maintainable.
+
+
+Loading States
+
+Loading states are handled by displaying a CircularProgressIndicator while data is being prepared or fetched.
+
+For example, on the dashboard screen a loading indicator is shown when the rooms list is empty until the rooms are loaded.
+
+
+Booking Failure Handling
+
+If a user tries to book a room for dates that overlap with an existing booking, the system prevents the booking.
+
+This validation is handled inside the BookingProvider using the isRoomAvailable() method.
+
+If the room is unavailable, a message is displayed to the user using a SnackBar.
+
+
+Local Data Handling
+
+Bookings are stored locally using SharedPreferences. 
+Each booking is saved as JSON and restored when the application starts again.
+
+Bookings are associated with the logged-in user by storing the user email with each booking.
+When displaying bookings, the app filters data to show only bookings belonging to the current user.
+
+This ensures that bookings persist across app restarts on the same device with the respective users.
+
+
+Scalability for Production
+
+If this application were scaled for production:
+
+• Room and booking data would be stored in a backend database
+• API services would be used instead of mock data
+• Authentication would be implemented using a secure service such as Firebase Auth
+• State management could be extended using Riverpod or Bloc
+• Pagination and caching would be added for large datasets
+• Network error handling and retry mechanisms would be implemented
+
+
+Conclusion
+
+The architecture focuses on simplicity, clean separation of concerns, and maintainable code while meeting the requirements of the assignment.
