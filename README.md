@@ -45,9 +45,7 @@ The application was developed as part of a technical assignment to demonstrate F
 
 ---
 
-Room Booking App/
-
-  lib
+lib
  ├── models
  │   ├── room_model.dart
  │   └── booking_model.dart
