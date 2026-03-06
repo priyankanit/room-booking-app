@@ -42,6 +42,7 @@ The application was developed as part of a technical assignment to demonstrate F
 ---
 
 ## Folder Structure
+Room Booking App
 
   lib
  ├── models
